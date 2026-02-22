@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>♟ Xadrez Avançado</title>
+
+    <!-- FAVICON (forma mais segura) -->
+    <link rel="shortcut icon" type="image/x-icon"
+          href="{{ url_for('static', filename='img/favicon.ico') }}?v=1">
+    <link rel="icon" type="image/x-icon"
+          href="{{ url_for('static', filename='img/favicon.ico') }}?v=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>♟ Jogo de Xadrez</h1>
+
+<div class="painel">
+
+    <div class="placar">
+        <h2>Placar</h2>
+        <p>Brancas: <span id="whiteScore">0</span></p>
+        <p>Pretas: <span id="blackScore">0</span></p>
+        <button onclick="resetScore()">Zerar Placar</button>
+    </div>
+
+    <div class="timer">
+        <h2>Tempo</h2>
+        <p>Brancas: <span id="whiteTimer">05:00</span></p>
+        <p>Pretas: <span id="blackTimer">05:00</span></p>
+        <button onclick="resetTimer()">Resetar Tempo</button>
+    </div>
+
+</div>
+
+<div id="board"></div>
+
+<div class="controles">
+    <button onclick="restartGame()">Reiniciar Partida</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
